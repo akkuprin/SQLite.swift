@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SQLite.swift"
-  s.version          = "0.10.1"
+  s.version          = "0.10.2"
   s.summary          = "A type-safe, Swift-language layer over SQLite3 for iOS and OS X."
 
   s.description      = <<-DESC
@@ -16,15 +16,15 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/stephencelis/SQLite.swift"
   s.license          = 'MIT'
   s.author           = { "Stephen Celis" => "stephen@stephencelis.com" }
-  s.source           = { :git => "https://github.com/stephencelis/SQLite.swift.git", :tag => s.version.to_s }
+  s.source           = { :git => "git@github.com:akkuprin/SQLite.swift.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/stephencelis'
 
-  s.module_name      = 'SQLite'
+  s.module_name      = 'standaloneSQLite'
   s.ios.deployment_target = "8.0"
   s.tvos.deployment_target = "9.0"
   s.osx.deployment_target = "10.9"
   s.watchos.deployment_target = "2.0"
-  s.default_subspec  = 'standard'
+  s.default_subspec  = 'standalone'
 
   s.subspec 'standard' do |ss|
     ss.source_files = 'SQLite/**/*.{c,h,m,swift}'
